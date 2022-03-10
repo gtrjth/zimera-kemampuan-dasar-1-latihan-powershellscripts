@@ -1,0 +1,404 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+PS C:\Users\user> C:\Scripts\My First Script.ps1
+C:\Scripts\My : The term 'C:\Scripts\My' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ C:\Scripts\My First Script.ps1
++ ~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Scripts\My:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\user> Test
+Test : The term 'Test' is not recognized as the name of a cmdlet, function, script file, or operable program. Check
+the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ Test
++ ~~~~
+    + CategoryInfo          : ObjectNotFound: (Test:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+
+Suggestion [3,General]: The command Test was not found, but does exist in the current location. Windows PowerShell does not load commands from the current location by default. If you trust this command, instead type: ".\Test". See "get-help about_Command_Precedence" for more details.
+PS C:\Users\user> Test.ps1
+Test.ps1 : The term 'Test.ps1' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ Test.ps1
++ ~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Test.ps1:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+
+Suggestion [3,General]: The command Test.ps1 was not found, but does exist in the current location. Windows PowerShell does not load commands from the current location by default. If you trust this command, instead type: ".\Test.ps1". See "get-help about_Command_Precedence" for more details.
+PS C:\Users\user> Set-ExecutionPolicy RemoteSigned
+
+Execution Policy Change
+The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose
+you to the security risks described in the about_Execution_Policies help topic at
+https:/go.microsoft.com/fwlink/?LinkID=135170. Do you want to change the execution policy?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): A
+Set-ExecutionPolicy : Access to the registry key
+'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell' is denied. To change the execution
+policy for the default (LocalMachine) scope, start Windows PowerShell with the "Run as administrator" option. To
+change the execution policy for the current user, run "Set-ExecutionPolicy -Scope CurrentUser".
+At line:1 char:1
++ Set-ExecutionPolicy RemoteSigned
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (:) [Set-ExecutionPolicy], UnauthorizedAccessException
+    + FullyQualifiedErrorId : System.UnauthorizedAccessException,Microsoft.PowerShell.Commands.SetExecutionPolicyComma
+   nd
+PS C:\Users\user> Scripts
+Scripts : The term 'Scripts' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ Scripts
++ ~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Scripts:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\user> Test.ps1
+Test.ps1 : The term 'Test.ps1' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ Test.ps1
++ ~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Test.ps1:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+
+Suggestion [3,General]: The command Test.ps1 was not found, but does exist in the current location. Windows PowerShell does not load commands from the current location by default. If you trust this command, instead type: ".\Test.ps1". See "get-help about_Command_Precedence" for more details.
+PS C:\Users\user> & C:\Test.ps1
+& : The term 'C:\Test.ps1' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:3
++ & C:\Test.ps1
++   ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Test.ps1:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException                                                                                                                                                                                          PS C:\Users\user> cmdlet                                                                                                cmdlet : The term 'cmdlet' is not recognized as the name of a cmdlet, function, script file, or operable program.       Check the spelling of the name, or if a path was included, verify that the path is correct and try again.               At line:1 char:1                                                                                                        + cmdlet                                                                                                                + ~~~~~~                                                                                                                    + CategoryInfo          : ObjectNotFound: (cmdlet:String) [], CommandNotFoundException                                  + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\user> Help Get-Command
+
+NAME
+    Get-Command
+
+SYNTAX
+    Get-Command [[-ArgumentList] <Object[]>] [-Verb <string[]>] [-Noun <string[]>] [-Module <string[]>]
+    [-FullyQualifiedModule <ModuleSpecification[]>] [-TotalCount <int>] [-Syntax] [-ShowCommandInfo] [-All]
+    [-ListImported] [-ParameterName <string[]>] [-ParameterType <PSTypeName[]>]  [<CommonParameters>]
+
+    Get-Command [[-Name] <string[]>] [[-ArgumentList] <Object[]>] [-Module <string[]>] [-FullyQualifiedModule
+    <ModuleSpecification[]>] [-CommandType {Alias | Function | Filter | Cmdlet | ExternalScript | Application | Script
+    | Workflow | Configuration | All}] [-TotalCount <int>] [-Syntax] [-ShowCommandInfo] [-All] [-ListImported]
+    [-ParameterName <string[]>] [-ParameterType <PSTypeName[]>]  [<CommonParameters>]
+
+
+ALIASES
+    gcm
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use Update-Help.
+        -- To view the Help topic for this cmdlet online, type: "Get-Help Get-Command -Online" or
+           go to https://go.microsoft.com/fwlink/?LinkID=113309.
+
+
+
+
+PS C:\Users\user> Help Get-Commad -Detailed
+Get-Help : Get-Help could not find Get-Commad in a help file in this session. To download updated help topics type:
+"Update-Help". To get help online, search for the help topic in the TechNet library at
+https:/go.microsoft.com/fwlink/?LinkID=107116.
+At line:55 char:5
++     Get-Help @PSBoundParameters | more
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceUnavailable: (:) [Get-Help], HelpNotFoundException
+    + FullyQualifiedErrorId : HelpNotFound,Microsoft.PowerShell.Commands.GetHelpCommand
+
+
+PS C:\Users\user> Get-Process
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    227      12     2772       7368              4396   0 afcdpsrv
+    346      20     9852      31220       0.34  11876   2 ApplicationFrameHost
+    127       8     1580       5964              4304   0 armsvc
+    226      13     4184      14164       0.30   4476   2 cmd
+    262      13     7560      19740       7.58   2300   2 conhost
+    267      14     5124      17652       1.09   9016   2 conhost
+    102       7     6320       1092       0.19   9044   2 conhost
+    572      21     1968       5784               644   0 csrss
+    627      23     2344       6228              5324   2 csrss
+    466      16     4424      21384       9.89   1916   2 ctfmon
+    365      17     3596      12568              2932   0 dasHost
+    248      17     4220      13428       0.31   3164   2 dllhost
+   1079      39    65860      69088              8556   2 dwm
+   2634      99    71956     152808      65.00   1476   2 explorer
+     32       5     1576       2228               604   0 fontdrvhost
+     32       7     3880       8468              5340   2 fontdrvhost
+   1032      46    42148     109376      10.59  11964   2 GitHubDesktop
+    536      26    81696      91464       7.56  12100   2 GitHubDesktop
+    290      17    12764      42904       0.48  12192   2 GitHubDesktop
+    444      43    48000      94816      17.20  12224   2 GitHubDesktop
+      0       0       60          8                 0   0 Idle
+    418      25     6676      24032       0.69   6316   2 IDMan
+   1540      27     8056      21332               844   0 lsass
+      0       0      388      60692              2496   0 Memory Compression
+    162      11     2532      11780       0.38   5856   2 memreduct
+   2213      54    25608      40980              4428   0 mms_mini
+   2761      91   859216     745504              4584   0 MsMpEng
+    218      12     4628      10764              4156   0 NisSrv
+    599      33    16200      44644       6.53   4268   2 notepad
+    266      14     3060      16660       0.11   9832   2 notepad
+    268      14     3128      16860       0.09  11836   2 notepad
+    537      31    24424      37632      99.09   3584   2 nvcontainer
+    570      28    11144      26336              4368   0 nvcontainer
+    450      20    23128      25768              1496   2 NVDisplay.Container
+    287      13     5000      13260              2144   0 NVDisplay.Container
+    602      76    37008       2568       1.75   4036   2 NVIDIA Web Helper
+    632      25    38060      41716              4384   0 OfficeClickToRun
+    425      21    30504      88416       2.39      8   2 opera
+    429      22    50828     113376       6.19    372   2 opera
+    265      15     8600      19572       0.59    652   2 opera
+    481      21    34412      97516       4.67   1280   2 opera
+    379      20    25360      79552      23.08   1396   2 opera
+    397      20    24272      75580       0.45   2728   2 opera
+    862      50   246060     174084      79.28   3404   2 opera
+    447      22    52688     120880      20.27   4064   2 opera
+    454      35    19568      39972      22.36   4380   2 opera
+   2614      83   144620     271024     167.59   5136   2 opera
+    443      23    41676     106236       5.14   5164   2 opera
+    402      21    41052     106552       4.97   5588   2 opera
+    379      20    22360      75428       0.50   6532   2 opera
+    432      22    34316      96324       1.73   7096   2 opera
+    363      19    20464      72928       0.77   9256   2 opera
+    424      22    35752     100428       1.77   9296   2 opera
+    372      20    18380      69512       0.56   9324   2 opera
+    363      20    34632      92064      13.22   9340   2 opera
+    423      21    27396      89120       2.06   9364   2 opera
+    336      19    13776      29560       0.11   9436   2 opera
+    667      26   153560     222616      43.45   9564   2 opera
+    436      23    47152     105204      21.34   9576   2 opera
+    434      21    37084      98452       5.27   9684   2 opera
+    366      20    20496      73412       0.77  10032   2 opera
+    352      19    17480      67664       0.66  10360   2 opera
+    418      20    28528      81132       0.63  10368   2 opera
+    422      20    28244      80944       0.69  10568   2 opera
+    474      21    33524      94700       2.41  10632   2 opera
+    416      21    34508      97616       1.41  10864   2 opera
+    317      18     7236      20512       0.53  10924   2 opera
+    352      19    25448      77688      12.42  10932   2 opera
+    362      20    18020      68188      28.09  10948   2 opera
+    379      20    22516      75572       0.84  11472   2 opera
+    493      22    29800      93684       1.16  12212   2 opera
+    388      10     2320       9008       0.06   7692   2 opera_crashreporter
+    817      42    79404      95656       9.28   3608   2 powershell
+    113       8     1132       4936              4456   0 PsiService_2
+    418      20     7312      23064       0.70   6548   2 Rainmeter
+      0      11     6816      83124               108   0 Registry
+    217      12     3272      18700       0.20   1072   2 RuntimeBroker
+    303      16     5424      22348       0.25   1404   2 RuntimeBroker
+    305      16     3848      20420       0.47   2388   2 RuntimeBroker
+    248      14     3132      19884       0.17   7768   2 RuntimeBroker
+    779      34    14928      46216       2.31   7876   2 RuntimeBroker
+    265      14     2488      11308              4296   0 schedul2
+   2538     114   155344     217632      17.81   3744   2 SearchApp
+    493      19     5352      17784              8620   0 SecurityHealthService
+    161       9     1680       9568       0.03   1152   2 SecurityHealthSystray
+    659      12     5540       9988               836   0 services
+    105       7     4520       7672              2344   0 SgrmBroker
+    595      30    22264      59332       0.72   6568   2 ShellExperienceHost
+    563      19     6240      27928       1.89   2824   2 sihost
+    421      23     8084      23884       0.14    976   2 smartscreen
+     53       3     1084        952               488   0 smss
+    428      22     5276      13048              3928   0 spoolsv
+    606      30    19480      63660       1.33   1092   2 StartMenuExperienceHost
+   1354      22     9968      26140               512   0 svchost
+   1090      17     7176      13752               600   0 svchost
+    308      15     3744      16772       0.44    740   2 svchost
+    109       7     1356       5944               984   0 svchost
+    297      11     2572       8416              1076   0 svchost
+    270      14     2700      10444              1296   0 svchost
+    295       9     2144      11552              1304   0 svchost
+    407      17     6804      15808              1384   0 svchost
+    263      14     3916      14208              1448   0 svchost
+    396      13     3588      13784              1508   0 svchost
+    402      13    14004      15700              1516   0 svchost
+    143       9     1724       6364              1556   0 svchost
+    314      13     3396      18740              1592   0 svchost
+    159       7     1592       5728              1620   0 svchost
+    400      15     4580      11972              1696   0 svchost
+    134      19     3892       7640              1812   0 svchost
+    224      10     2160       7220              1920   0 svchost
+    186       9     6468      14332              1960   0 svchost
+    121       8     1440       6840              2004   0 svchost
+    409      12     3084       9320              2112   0 svchost
+    200      10     2032       8592              2244   0 svchost
+    176      10     1928       7240              2264   0 svchost
+    237      12     2960      13824              2308   0 svchost
+    204       7     1308       5716              2320   0 svchost
+    163       9     1928       7420              2332   0 svchost
+    299      15     3424       8744              2484   0 svchost
+    141       9     1576       6712              2528   0 svchost
+    170      11     1928       8236              2540   0 svchost
+    204       9     2148       8184              2636   0 svchost
+    146       9     2028       7860              2644   0 svchost
+    231      15     2200       7476              2716   0 svchost
+    267      15     2884       9512              2720   0 svchost
+    145       8     1400       6300              2840   0 svchost
+    221      12     2744      11552              2968   0 svchost
+    214      11     2108       8332              3116   0 svchost
+    145      13     1784       6500              3348   0 svchost
+    412      19     3088      10868              3368   0 svchost
+    418      32    11720      20044              3436   0 svchost
+    238      17     3344      10388              3452   0 svchost
+    103       8     1320       6396              3656   0 svchost
+    500      21     6220      17216              3712   0 svchost
+    365      15     8400      17632              3824   0 svchost
+    248      15     2664      13804              3832   0 svchost
+    372      19     7564      32068       1.25   3884   2 svchost
+    363      19     2976      10936              3920   0 svchost
+    184      11     2100       7824              4216   0 svchost
+    367      27     4352      13912              4312   0 svchost
+    345      20    24388      28488              4332   0 svchost
+    129      10     1648       5872              4480   0 svchost
+    194      16     6704       9880              4492   0 svchost
+    184      10     1976       8228              4536   0 svchost
+    374      17     4728      20876              4564   0 svchost
+    210      12     4208      12988              4688   0 svchost
+    312      12     4952      11468              4696   0 svchost
+    207      12     2168       7120              4904   0 svchost
+    103       7     1308       5196              5084   0 svchost
+    212      12     2408       8956              5096   0 svchost
+    400      27     3604      13040              5192   0 svchost
+    279      12     3300      14964              5664   0 svchost
+    172       9     1584       7324              5800   0 svchost
+    126       8     1528       6392              6000   0 svchost
+    121       7     1352       6144              6392   0 svchost
+    146      10     1896      10032              7172   0 svchost
+    192      11     2500       9304              7236   0 svchost
+    300      15     3928      22264       0.30   7476   2 svchost
+    212      11     2288       8976              7572   0 svchost
+    246      14     2900      12536       0.11   7676   2 svchost
+    147       9     1720      11240              8692   0 svchost
+    289      15     3512      15068              8724   0 svchost
+    111       8     1496       6464             11328   0 svchost
+    289      17     4464      14184              7136   0 syncagentsrv
+   3388       0      196        144                 4   0 System
+    870      41    30652       2300       1.06  11532   2 SystemSettings
+    304      36     8132      19060       0.98   3948   2 taskhostw
+    577      24    19864      46936       1.36   9624   2 TextInputHost
+    247      17     2748      12892              2032   0 vds
+    167      11     1556       7304               732   0 wininit
+    277      12     2748      10684              3780   2 winlogon
+    591      43    37656       2856       0.66   3676   2 YourPhone
+
+
+PS C:\Users\user> Get-Mailboc
+Get-Mailboc : The term 'Get-Mailboc' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ Get-Mailboc
++ ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Get-Mailboc:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\user> Get-Mailboc
+Get-Mailboc : The term 'Get-Mailboc' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ Get-Mailboc
++ ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Get-Mailboc:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\user> Get-Mailbox
+Get-Mailbox : The term 'Get-Mailbox' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ Get-Mailbox
++ ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Get-Mailbox:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\user> Get-RDUserSession
+Get-RDUserSession : The term 'Get-RDUserSession' is not recognized as the name of a cmdlet, function, script file, or
+operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try
+again.
+At line:1 char:1
++ Get-RDUserSession
++ ~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Get-RDUserSession:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\user> gcm *user*
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Function        Set-PcsvDeviceUserPassword                         1.0.0.0    PcsvDevice
+Cmdlet          Disable-LocalUser                                  1.0.0.0    Microsoft.PowerShell.LocalAccounts
+Cmdlet          Enable-LocalUser                                   1.0.0.0    Microsoft.PowerShell.LocalAccounts
+Cmdlet          Get-LocalUser                                      1.0.0.0    Microsoft.PowerShell.LocalAccounts
+Cmdlet          Get-WinUserLanguageList                            2.0.0.0    International
+Cmdlet          New-LocalUser                                      1.0.0.0    Microsoft.PowerShell.LocalAccounts
+Cmdlet          New-WinUserLanguageList                            2.0.0.0    International
+Cmdlet          Remove-LocalUser                                   1.0.0.0    Microsoft.PowerShell.LocalAccounts
+Cmdlet          Rename-LocalUser                                   1.0.0.0    Microsoft.PowerShell.LocalAccounts
+Cmdlet          Restore-UevUserSetting                             2.1.639.0  UEV
+Cmdlet          Set-LocalUser                                      1.0.0.0    Microsoft.PowerShell.LocalAccounts
+Cmdlet          Set-WinUserLanguageList                            2.0.0.0    International
+Application     DevModeRunAsUserConfig.msc                         0.0.0.0    C:\WINDOWS\system32\DevModeRunAsUserCo...
+Application     DsmUserTask.exe                                    10.0.19... C:\WINDOWS\system32\DsmUserTask.exe
+Application     quser.exe                                          10.0.19... C:\WINDOWS\system32\quser.exe
+Application     UserAccountBroker.exe                              10.0.19... C:\WINDOWS\system32\UserAccountBroker.exe
+Application     UserAccountControlSettings.exe                     10.0.19... C:\WINDOWS\system32\UserAccountControl...
+Application     userinit.exe                                       10.0.19... C:\WINDOWS\system32\userinit.exe
+
+
+PS C:\Users\user> Get-ChildItem
+
+
+    Directory: C:\Users\user
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        03/03/2022     16:55                .android
+d-r---        01/03/2022     23:43                3D Objects
+d-----        03/03/2022     20:01                ansel
+d-r---        01/03/2022     23:43                Contacts
+d-r---        10/03/2022     18:40                Desktop
+d-r---        11/03/2022     02:13                Documents
+d-r---        06/03/2022     21:13                Downloads
+d-r---        01/03/2022     23:43                Favorites
+d-r---        01/03/2022     23:43                Links
+d-r---        01/03/2022     23:43                Music
+d-r---        01/03/2022     23:43                Pictures
+d-r---        01/03/2022     23:43                Saved Games
+d-----        11/03/2022     03:18                Scripts
+d-r---        01/03/2022     23:43                Searches
+d-r---        01/03/2022     23:43                Videos
+-a----        11/03/2022     02:12            199 .gitconfig
+-a----        11/03/2022     02:26          18876 assoc.cfg
+-a----        11/03/2022     02:40          18876 assoc.txt
+-a----        11/03/2022     03:05              0 cmdline.txt
+-a----        11/03/2022     03:05              0 copy
+-a----        11/03/2022     02:24              0 Microsoft
+-a----        11/03/2022     02:35              0 sample.txt
+-a----        11/03/2022     02:24              0 taskmanager
+-a----        11/03/2022     03:16             19 Test.ps1
+
+
+PS C:\Users\user> Get-Alias -Name IS
+Get-Alias : This command cannot find a matching alias because an alias with the name 'IS' does not exist.
+At line:1 char:1
++ Get-Alias -Name IS
++ ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (IS:String) [Get-Alias], ItemNotFoundException
+    + FullyQualifiedErrorId : ItemNotFoundException,Microsoft.PowerShell.Commands.GetAliasCommand
+
+PS C:\Users\user>  
